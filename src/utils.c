@@ -38,10 +38,8 @@ int check_duplicate(int *arr, int size)
 	{
 		j = i+1;
 		while (j < size)
-		{
 			if (arr[i] == arr[j++])
 				return (1);
-		}
 	}
 	free(arr);
 	return (0);
@@ -109,10 +107,8 @@ int ps_is_num(char *s)
 	if (!s)
 		return (0);
 	while (s[++i])
-	{
 		if (!ft_isdigit(s[i]))
 			return (0);
-	}
 	return (1);
 }
 
