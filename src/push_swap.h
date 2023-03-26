@@ -22,5 +22,5 @@ void	ps_print_arr(int *arr, int size);
 int	ps_is_num(char *s);
 void ps_exit_with_error();
 int check_duplicate(int *arr, int size);
-
+void ps_order_indexes(t_swap *t);
 #endif

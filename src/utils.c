@@ -28,6 +28,31 @@ int *ps_split_args(char **av, t_swap *t_a)
 	return (nums);
 }
 
+void ps_order_indexes(t_swap *t)
+{
+	int i;
+	int j;
+
+	i = -1; // 0
+	j = 0;	// 1
+
+	while (++i < t->size)
+	{
+		while (++j < t->size)
+		{
+			if (t->arr[i] > t->arr[j])
+				t->arr_index[i]++;
+			else if (t->arr[i] < t->arr[j])
+				t->arr_index[j]++;
+		}
+		j = -1;
+	}
+	i = -1;
+	while (++i < t->size)
+		if (t->arr_index[i] != 0)
+			t->arr_index[i] /= 2;
+}
+
 int check_duplicate(int *arr, int size)
 {
 	int i;
@@ -36,7 +61,7 @@ int check_duplicate(int *arr, int size)
 	i = -1;
 	while (++i < size)
 	{
-		j = i+1;
+		j = i + 1;
 		while (j < size)
 			if (arr[i] == arr[j++])
 				return (1);
@@ -114,6 +139,6 @@ int ps_is_num(char *s)
 
 void ps_exit_with_error()
 {
-	write(2,"Error\n",6);
+	write(2, "Error\n", 6);
 	exit(1);
 }
