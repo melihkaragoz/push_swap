@@ -1,9 +1,9 @@
-SRCS			=	push_swap.c utils.c
+SRCS			=	push_swap.c utils.c futils.c fdo.c
 LIBFT			=	../libft
 OBJS			=	$(SRCS:.c=.o)
 NAME			=	push_swap
 CC				=	gcc
-CFLAGS			=	-Wall -Wextra 
+CFLAGS			=	-Wall -Wextra
 RM				=	rm -rf
 
 $(NAME):		$(OBJS) ft $(LIBFT)
@@ -14,7 +14,7 @@ all:			$(NAME) ft $(LIBFT)
 ft:
 				@make -C ../libft
 
-clean:			
+clean:
 				$(RM) $(OBJS)
 
 fclean:			clean
