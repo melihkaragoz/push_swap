@@ -1,4 +1,4 @@
-SRCS			=	push_swap.c utils.c futils.c fdo.c
+SRCS			=	push_swap.c utils.c
 LIBFT			=	../libft
 OBJS			=	$(SRCS:.c=.o)
 NAME			=	push_swap
