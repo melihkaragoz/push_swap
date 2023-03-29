@@ -6,7 +6,7 @@
 /*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/26 17:10:06 by mkaragoz          #+#    #+#             */
-/*   Updated: 2023/03/28 22:50:45 by mkaragoz         ###   ########.fr       */
+/*   Updated: 2023/03/29 03:33:13 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,10 @@ int main(int ac, char **av)
 	ps_find_min(stack_a.arr, stack_a.size, &stack_a);
 	ps_print_arr(stack_a.arr, stack_a.size);
 	ps_rra(&stack_a);
+	ps_print_arr(stack_a.arr, stack_a.size);
+	ps_ra(&stack_a);
+	ps_print_arr(stack_a.arr, stack_a.size);
+	ps_sa(&stack_a);
 	ps_print_arr(stack_a.arr, stack_a.size);
 	return (0);
 }

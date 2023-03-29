@@ -33,7 +33,12 @@ void ps_order_indexes(t_swap *t_a);
 void ps_rotate(t_swap *t_a);
 void ps_reverse_rotate(t_swap *t_a);
 void ps_ra(t_swap *t_a);
-void ps_rb(t_swap *t_a);
+void ps_rb(t_swap *t_b);
 void ps_rr(t_swap *t_a, t_swap *t_b);
 void ps_rra(t_swap *t_a);
+void ps_rrb(t_swap *t_b);
+void ps_rrr(t_swap *t_a, t_swap *t_b);
+void ps_sa(t_swap *t_a);
+void ps_sb(t_swap *t_b);
+void ps_ss(t_swap *t_a, t_swap *t_b);
 #endif
