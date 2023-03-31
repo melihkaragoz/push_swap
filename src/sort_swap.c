@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memchr.c                                        :+:      :+:    :+:   */
+/*   sort_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megordag <megordag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/04 17:33:40 by megordag          #+#    #+#             */
-/*   Updated: 2022/10/11 19:11:55 by megordag         ###   ########.fr       */
+/*   Created: 2023/03/31 03:12:15 by mkaragoz          #+#    #+#             */
+/*   Updated: 2023/03/31 03:15:54 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	*ft_memchr(const void *s, int c, size_t n)
+void	ps_sa(t_stack *t)
 {
-	unsigned char	*i;
-	size_t			len;
-
-	i = (unsigned char *)s;
-	len = 0;
-	while (len < n)
-	{
-		if (i[len] == (unsigned char)c)
-			return (i + len);
-		len++;
-	}
-	return (NULL);
+	ps_swap(t);
+	write(1, "sa\n", 3);
 }

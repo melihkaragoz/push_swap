@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                      :+:      :+:    :+:   */
+/*   sort_push.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megordag <megordag@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 18:50:44 by megordag          #+#    #+#             */
-/*   Updated: 2022/10/11 19:33:13 by megordag         ###   ########.fr       */
+/*   Created: 2023/04/01 00:01:40 by mkaragoz          #+#    #+#             */
+/*   Updated: 2023/04/01 00:11:11 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char*))
+void	ps_pa(t_stack *t_a, t_stack *t_b)
 {
-	int	i;
+	ps_push(t_a, t_b);
+	write(1, "pa\n", 3);
+}
 
-	i = 0;
-	while (s[i])
-	{
-		f(i, &s[i]);
-		i++;
-	}
+void	ps_pb(t_stack *t_a, t_stack *t_b)
+{
+	ps_push(t_a, t_b);
+	write(1, "pb\n", 3);
 }

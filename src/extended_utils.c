@@ -1,20 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   extended_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: megordag <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: mkaragoz <mkaragoz@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/03 18:57:25 by megordag          #+#    #+#             */
-/*   Updated: 2022/10/03 18:57:29 by megordag         ###   ########.fr       */
+/*   Created: 2023/03/31 02:46:24 by mkaragoz          #+#    #+#             */
+/*   Updated: 2023/03/31 02:47:13 by mkaragoz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_isascii(int c)
+int	ps_check_num(char **strs)
 {
-	if (c <= 127 && c >= 0)
-		return (1);
-	return (0);
+	int	i;
+
+	i = -1;
+	while (strs[++i])
+	{
+		if (ft_atoi(strs[i]) < -2147483648
+			|| ft_atoi(strs[i]) > 2147483647)
+			ps_exit();
+	}
+	return (1);
 }
